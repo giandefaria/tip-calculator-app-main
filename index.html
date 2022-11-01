@@ -17,11 +17,11 @@
             <label for="bill">Bill</label>
             <input type="number" name="bill" id="bill" class="tip-box__bill__value">
             <label for="select tip">Select Tip %</label>
-            <button class="tip-box__tip__value" value="5">5%</button>
-            <button class="tip-box__tip__value" value="10">10%</button>
-            <button class="tip-box__tip__value" value="15">15%</button>
-            <button class="tip-box__tip__value" value="25">25%</button>
-            <button class="tip-box__tip__value" value="50">50%</button>
+            <button class="tip-box__tip__value" value="0.05">5%</button>
+            <button class="tip-box__tip__value" value="0.1">10%</button>
+            <button class="tip-box__tip__value" value="0.15">15%</button>
+            <button class="tip-box__tip__value" value="0.25">25%</button>
+            <button class="tip-box__tip__value" value="0.50">50%</button>
             <input type="number" name="select tip" id="custom" placeholder="CUSTOM" class="tip-box__tip__value" oninput="outputValue()">
 
             <label for="number-of-people">Number of People</label>
@@ -32,7 +32,13 @@
         </div>
 
         <div class="tip-box__total">
+            <p>Tip Amount</p>
+            <sub>/ person</sub>
             <output id="tipAmount">$0.00</output>
+
+            <p>Total</p>
+            <sub>/ person</sub>
+            <output id="tipTotal">$0.00</output>
 
         </div>
 
