@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>SPLITER</h1>
+    
+    <main class="tip-box">
+        <div class="tip-box__bill">
+            <label for="bill">Bill</label>
+            <input type="number" name="bill" id="bill" class="tip-box__bill__value">
+            <label for="select tip">Select Tip %</label>
+            <button class="tip-box__tip__value" value="5">5%</button>
+            <button class="tip-box__tip__value" value="10">10%</button>
+            <button class="tip-box__tip__value" value="15">15%</button>
+            <button class="tip-box__tip__value" value="25">25%</button>
+            <button class="tip-box__tip__value" value="50">50%</button>
+            <input type="number" name="select tip" id="custom" placeholder="CUSTOM" class="tip-box__tip__value" oninput="outputValue()">
+
+            <label for="number-of-people">Number of People</label>
+            <input type="number" name="number of people" id="number-of-people" value="0">
+            <span></span>
+            
+
+        </div>
+
+        <div class="tip-box__total">
+            <output id="tipAmount">$0.00</output>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
