@@ -15,18 +15,18 @@
     <main class="tip-box">
         <div class="tip-box__bill">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" class="tip-box__bill__value">
+            <input type="number" name="bill" id="bill" class="tip-box__bill__value reset">
             <label for="select tip">Select Tip %</label>
-            <button class="tip-box__tip__value" value="0.05">5%</button>
-            <button class="tip-box__tip__value" value="0.1">10%</button>
-            <button class="tip-box__tip__value" value="0.15">15%</button>
-            <button class="tip-box__tip__value" value="0.25">25%</button>
-            <button class="tip-box__tip__value" value="0.50">50%</button>
-            <input type="number" name="select tip" id="custom" placeholder="CUSTOM" class="tip-box__tip__value" oninput="outputValue()">
+            <button class="tip-box__tip__value" value="5">5%</button>
+            <button class="tip-box__tip__value" value="10">10%</button>
+            <button class="tip-box__tip__value" value="15">15%</button>
+            <button class="tip-box__tip__value" value="25">25%</button>
+            <button class="tip-box__tip__value" value="50">50%</button>
+            <input type="number" name="select tip" id="custom" placeholder="CUSTOM" class="tip-box__tip__value reset">
 
             <label for="number-of-people">Number of People</label>
-            <input type="number" name="number of people" id="number-of-people" value="0">
-            <span></span>
+            <input type="number" name="number of people" id="number-of-people" value="" placeholder="0" class="reset" onkeyup="verifyNumberPeople()">
+            <span id="error1"></span>
             
 
         </div>
@@ -39,6 +39,8 @@
             <p>Total</p>
             <sub>/ person</sub>
             <output id="tipTotal">$0.00</output>
+
+            <button type="reset" id="reset" onclick="reset ()">RESET</button>
 
         </div>
 
