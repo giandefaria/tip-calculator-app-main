@@ -1,6 +1,49 @@
+body {
+    background-color: hsl(185, 41%, 84%)
+
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.logo {
+    display: block;
+    margin: 10% auto 5%;
+}
+
+.tip-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    border-width: 30px;
+    border-radius: 20px;
+
+}
+
+.tip-box__bill, .tip-box__total {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 45%;
+}
+
+/*.tip-box__total {
+    width: 200px;
+}*/
+
+.tip-box__total__flex {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
