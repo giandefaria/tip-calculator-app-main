@@ -7,11 +7,16 @@
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>SPLITER</h1>
-    
+    <div>
+        <img src="images/logo.svg" alt="logo" class="logo">
+    </div>
     <main class="tip-box">
         <div class="tip-box__bill">
             <label for="bill">Bill</label>
@@ -32,13 +37,25 @@
         </div>
 
         <div class="tip-box__total">
-            <p>Tip Amount</p>
-            <sub>/ person</sub>
-            <output id="tipAmount">$0.00</output>
+            <div class="tip-box__total__flex">
+                <div> 
+                    <p>Tip Amount</p>
+                    <sub>/ person</sub>
+                </div>
+                <div>
+                    <output id="tipAmount">$0.00</output>
+                </div>
+            </div>
 
-            <p>Total</p>
-            <sub>/ person</sub>
-            <output id="tipTotal">$0.00</output>
+            <div class="tip-box__total__flex">
+                <div> 
+                    <p>Total</p>
+                    <sub>/ person</sub>
+                </div>
+                <div>
+                    <output id="tipTotal">$0.00</output>
+                </div>    
+            </div>
 
             <button type="reset" id="reset" onclick="reset ()">RESET</button>
 
