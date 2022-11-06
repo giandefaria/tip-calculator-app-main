@@ -1,6 +1,12 @@
-body {
-    background-color: hsl(185, 41%, 84%)
+html, body, main, button, input {
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
 
+body {
+    background-color: hsl(185, 41%, 84%);
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -14,18 +20,46 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 10% auto 5%;
 }
 
+
 .tip-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 600px;
     height: 300px;
     margin: 0 auto;
     border: solid;
+    background: hsl(0, 0%, 100%);
     border-color: hsl(0, 0%, 100%);
-    border-width: 30px;
+    border-width: 21px;
     border-radius: 20px;
 
+}
+
+.tip-box__bill {
+    height: 100%;
+}
+
+label {
+    margin: 15px 0 10px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: hsl(186, 14%, 43%);
+
+}
+
+#bill {
+    background: hsl(189, 41%, 97%) url(images/icon-dollar.svg) no-repeat 14px;
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    padding: 8px 15px;
+    margin-bottom: 6px;
+    text-align: right;
+    border: none;
+    border-radius: 5px
+    
+  
 }
 
 .tip-box__bill, .tip-box__total {
@@ -35,15 +69,102 @@ input[type=number]::-webkit-inner-spin-button {
     width: 45%;
 }
 
-/*.tip-box__total {
-    width: 200px;
-}*/
+.tip-box__tip__value {
+    width: 83px;
+    margin: 0px 0 14px 0;
+    padding: 6px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.design-button {
+    background: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+}
+
+.design-button--active {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+}
+
+#custom, #custom::placeholder {
+    width: 80px;
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+    background: hsl(189, 41%, 97%);
+}
+
+
+#number-of-people {
+    background: hsl(189, 41%, 97%) url(images/icon-person.svg) no-repeat 14px;
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    padding: 8px 15px;
+    text-align: right;
+    border: none;
+    border-radius: 5px
+}
+
+.tip-box__total {
+    display: flex;
+    gap: 36px;
+    background: hsl(183, 100%, 15%);
+    height: 100%;
+    width: 50%;
+    border-radius: 12px;
+}
+
 
 .tip-box__total__flex {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 25px 0px;
 
+}
+
+.start-position-box-content {
+    margin-top: 44px;
+}
+
+p {
+    color: hsl(189, 41%, 97%);
+    font-size: 12px;
+}
+
+sub {
+    color: hsl(184, 14%, 56%);
+    font-size: 10px;
+}
+
+#tipAmount, #tipTotal {
+    color: hsl(172, 67%, 45%);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#reset {
+
+    border: none;
+    border-radius: 3px;
+    display: block;
+    margin: 53px auto 0;
+    padding: 6px 105px;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+}
+
+.background{
+    background: hsl(183deg 79% 23%);
+
+}
+
+.background--active {
+    background: hsl(172, 67%, 45%);
 }
 
