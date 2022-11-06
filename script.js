@@ -4,6 +4,8 @@ const tipValue = document.querySelectorAll('.tip-box__tip__value');
 const inputValue = document.getElementById('custom');
 const numberPeople = document.getElementById('number-of-people');
 const tipTotalOutput = document.getElementById('tipTotal');
+const activeReset = document.getElementById('reset');
+const buttonActive = document.querySelectorAll('.design-button');
 
 bill.addEventListener('keyup', () => {
     tipAmountOutput.value = ('$' + bill.value);
@@ -46,6 +48,26 @@ function verifyNumberPeople () {
     }
 }
  
+function resetOn () { 
+    if (bill.value > 0 || numberPeople.value > 0 || tipValue.value > 0 || tipAmountOutput.value != "$0.00" || tipTotalOutput.value != "$0.00") {
+        activeReset.classList.remove("background");
+        activeReset.classList.add("background--active");
+    } else {
+        activeReset.classList.remove("background--active");
+        activeReset.classList.add("background");
+    }
+}
+
+setInterval(resetOn, 100);
+
+function resetButtonsDesign () {
+    let index = 0
+        while (index < buttonActive.length) {
+            buttonActive[index].classList.remove("design-button--active");
+            buttonActive[index].classList.add("design-button");
+            index++
+        }
+}
     
 function reset () {
 
@@ -58,5 +80,20 @@ function reset () {
     }
     tipAmountOutput.value = "$0.00"
     tipTotalOutput.value = "$0.00";
+    resetButtonsDesign();
 
 }
+
+for (let i = 0; i < buttonActive.length; i++) {
+    
+   
+    buttonActive[i].addEventListener('click', () => {
+
+        resetButtonsDesign();
+        buttonActive[i].classList.toggle('design-button--active')
+   
+
+     } )
+
+}
+
