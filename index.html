@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=Montserrat&family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,14 +20,16 @@
     <main class="tip-box">
         <div class="tip-box__bill">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" class="tip-box__bill__value reset">
+            <input type="number" name="bill" id="bill" class="tip-box__bill__value reset" placeholder="0">
             <label for="select tip">Select Tip %</label>
-            <button class="tip-box__tip__value" value="5">5%</button>
-            <button class="tip-box__tip__value" value="10">10%</button>
-            <button class="tip-box__tip__value" value="15">15%</button>
-            <button class="tip-box__tip__value" value="25">25%</button>
-            <button class="tip-box__tip__value" value="50">50%</button>
-            <input type="number" name="select tip" id="custom" placeholder="CUSTOM" class="tip-box__tip__value reset">
+            <div class="button-flex"> 
+                <button class="tip-box__tip__value design-button" value="5">5%</button>
+                <button class="tip-box__tip__value design-button" value="10">10%</button>
+                <button class="tip-box__tip__value design-button" value="15">15%</button>
+                <button class="tip-box__tip__value design-button" value="25">25%</button>
+                <button class="tip-box__tip__value design-button" value="50">50%</button>
+                <input type="number" name="select tip" id="custom" placeholder="Custom" class="tip-box__tip__value reset">
+            </div>
 
             <label for="number-of-people">Number of People</label>
             <input type="number" name="number of people" id="number-of-people" value="" placeholder="0" class="reset" onkeyup="verifyNumberPeople()">
@@ -38,11 +40,11 @@
 
         <div class="tip-box__total">
             <div class="tip-box__total__flex">
-                <div> 
+                <div class="start-position-box-content"> 
                     <p>Tip Amount</p>
                     <sub>/ person</sub>
                 </div>
-                <div>
+                <div class="start-position-box-content">
                     <output id="tipAmount">$0.00</output>
                 </div>
             </div>
@@ -57,7 +59,7 @@
                 </div>    
             </div>
 
-            <button type="reset" id="reset" onclick="reset ()">RESET</button>
+            <button type="reset" id="reset" onclick="reset ()" class="background">RESET</button>
 
         </div>
 
