@@ -17,7 +17,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .logo {
     display: block;
-    margin: 10% auto 5%;
+    margin: 140px auto 73px;
 }
 
 
@@ -98,6 +98,17 @@ label {
     background: hsl(189, 41%, 97%);
 }
 
+.box-strings-number-of-people {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+span {
+    font-size: 12px;
+    color: hsl(12deg 100% 66%);
+    font-weight: bold;
+}
 
 #number-of-people {
     background: hsl(189, 41%, 97%) url(images/icon-person.svg) no-repeat 14px;
@@ -106,8 +117,20 @@ label {
     color: hsl(183, 100%, 15%);
     padding: 8px 15px;
     text-align: right;
-    border: none;
     border-radius: 5px
+}
+
+
+
+.number-of-people {
+    border: none;
+}
+
+.number-of-people--active {
+    border: solid;
+    border-width: 1px;
+    border-color: hsl(12deg 100% 66%)
+
 }
 
 .tip-box__total {
@@ -168,3 +191,43 @@ sub {
     background: hsl(172, 67%, 45%);
 }
 
+
+@media screen and (max-width: 640px){
+
+    .logo {
+        margin: 40px auto 34px;
+    }
+
+    .tip-box {
+        flex-direction: column;
+        width: unset;
+        height: 100%;
+        gap: 35px;
+        border-bottom-width: 52px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 0 20px 0
+    }
+
+    .tip-box__bill, .tip-box__total {
+        width: 100%;
+    }
+
+    .tip-box__tip__value {
+        width: 48%;
+        height: 53px;
+    }
+
+    #custom {
+        width: 48%;
+    }
+
+    #custom::placeholder {
+        width: unset;
+    }
+
+    #reset {
+        margin: 53px auto 22px;
+    }
+    
+}
