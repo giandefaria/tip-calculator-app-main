@@ -36,17 +36,24 @@ for (let i = 0; i < tipValue.length; i++) {
 }
 
 const errorMessage = document.getElementById('error1');
+const numberOfPeopleStyle = document.getElementById("number-of-people")
 
 function verifyNumberPeople () {
 
     if (numberPeople.value == 0 || numberPeople.value == "") {
-
-        errorMessage.innerText = "teste";
+        numberOfPeopleStyle.classList.remove("number-of-people");
+        numberOfPeopleStyle.classList.add("number-of-people--active");
+        errorMessage.innerText = "Can't be zero";
             
     } else {
+        numberOfPeopleStyle.classList.remove("number-of-people--active");
+        numberOfPeopleStyle.classList.add("number-of-people");
         errorMessage.innerText = "";
     }
 }
+
+setInterval(verifyNumberPeople, 100);
+
  
 function resetOn () { 
     if (bill.value > 0 || numberPeople.value > 0 || tipValue.value > 0 || tipAmountOutput.value != "$0.00" || tipTotalOutput.value != "$0.00") {
