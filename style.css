@@ -206,7 +206,7 @@ sub {
         border-bottom-width: 52px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        padding: 0 20px 0
+        padding: 0 5px 0
     }
 
     .tip-box__bill, .tip-box__total {
