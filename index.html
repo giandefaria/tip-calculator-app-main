@@ -20,7 +20,7 @@
     <main class="tip-box">
         <div class="tip-box__bill">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" class="tip-box__bill__value reset" placeholder="0">
+            <input type="number" min="0" name="bill" id="bill" class="tip-box__bill__value reset" placeholder="0">
             <label for="select-tip">Select Tip %</label>
             <div class="button-flex"> 
                 <button class="tip-box__tip__value design-button" value="5">5%</button>
@@ -33,7 +33,7 @@
             <div class="box-strings-number-of-people"> 
                 <label for="number-of-people">Number of People</label> <span id="error1"></span>
             </div>
-            <input type="number" name="number of people" id="number-of-people" value="" placeholder="0" class="reset number-of-people" onkeyup="verifyNumberPeople()">
+            <input type="number" name="number of people" id="number-of-people" min="0" value="" placeholder="0" class="reset number-of-people" onkeyup="verifyNumberPeople()">
             
             
 

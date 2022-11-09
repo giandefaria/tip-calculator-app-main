@@ -7,9 +7,6 @@ const tipTotalOutput = document.getElementById('tipTotal');
 const activeReset = document.getElementById('reset');
 const buttonActive = document.querySelectorAll('.design-button');
 
-bill.addEventListener('keyup', () => {
-    tipAmountOutput.value = ('$' + bill.value);
-})
 
 var test;
 for (let i = 0; i < tipValue.length; i++) {
